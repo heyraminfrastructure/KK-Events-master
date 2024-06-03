@@ -1,0 +1,127 @@
+
+.carousel_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Full width of wrapper */
+    position: relative;
+}
+
+.carousel_container {
+    width: 900px; /* Set width of carousel */
+    overflow: hidden;
+    margin-top: 3.5rem;
+    position: relative;
+}
+
+.carousell {
+    display: flex;
+    min-width: 600px;
+    transition: transform 0.5s ease-in-out; /* Smooth transition for slide effect */
+}
+
+.cards {
+    flex: 0 0 33.33%; /* Each card takes up 33.33% of the carousel's width */
+    box-sizing: border-box;
+    padding: 25px;
+    margin: 1rem;
+    border-radius: 20px;
+    color: white;
+    background:linear-gradient(135deg, #65799b 0%,#5e2563 100%);    border-right: 1px dotted black;
+    text-align: center;
+}
+
+.cards img {
+    max-width: 80px; /* Adjust image size as needed */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.cards p {
+    font-style: italic;
+    margin: 0 0 10px;
+}
+
+.cards h3 {
+    margin: 0;
+    font-weight: normal;
+}
+
+/* Star rating styling */
+.star_rating {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.star_rating span {
+    color: gold; /* Gold star color */
+    font-size: 20px;
+}
+
+/* Dot navigation styling */
+.dot_navigation {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    position: absolute;
+    bottom: -40px;
+    width: 100%;
+    
+}
+
+.dott {
+    width: 12px;
+    height: 12px;
+    background-color: lightgray;
+    border-radius: 50%;
+    margin: 0 3px;
+    cursor: pointer;
+    
+}
+
+.dott.activee {
+    background-color: gray;
+}
+
+/* Carousel control buttons */
+.carousel_control {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.carousel_control.prevv {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel_control.next {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel_control:hover {
+    color: black;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    /* Adjust card width for smaller screens */
+    .card {
+        flex: 0 0 50%; /* Each card takes up 50% of the carousel's width */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Adjust card width for the smallest screens */
+    .card {
+        flex: 0 0 100%; /* Each card takes up the full width of the carousel */
+    }
+}

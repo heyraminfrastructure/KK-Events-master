@@ -1,0 +1,104 @@
+/* Carousel container */
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  overflow: hidden; 
+}
+
+/* Slides container */
+.slides-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out; /* Smooth transition */
+  width: 100%; /* Use width to account for more slides */
+}
+
+/* Individual slides */
+.slide {
+  min-width: 100%; /* Each slide takes up the full width of the container */
+  box-sizing: border-box;
+  padding: 10px; /* Adjust padding for better styling */
+  text-align: center;
+}
+
+/* Navigation buttons */
+.carousel-btn {
+  position: absolute;
+  top: 50%; /* Vertically center the buttons */
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1;
+}
+
+/* Left navigation button */
+.carousel-btn.prev-btn {
+  left: 0;
+}
+
+/* Right navigation button */
+.carousel-btn.next-btn {
+  right: 0;
+}
+
+/* Arrow images */
+.carousel-btn img {
+  width: 20px; /* Adjust the width of the arrow images */
+  height: auto; /* Maintain the aspect ratio */
+}
+
+/* Carousel dots for navigation */
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  background-color: #cccccc; /* Light gray */
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition for color */
+}
+
+.dot.active {
+  background-color: #333333; /* Darker color for active dot */
+}
+
+/* Slide content styles */
+.slide-content {
+  padding: 20px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.slide-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.slide-content p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.slide-content img {
+  max-width: 100%; /* Make the image responsive */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 5px; /* Add rounded corners */
+}
+
+@media only screen and (max-width: 600px){
+  .members-name{
+    font-size: 20px;
+  }
+  .location{
+    font-size: 10px;
+  }
+  
+}

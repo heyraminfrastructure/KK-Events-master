@@ -1,0 +1,38 @@
+/* CSS for offcanvas menu */
+.offcanvas {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 1050;
+    right: 0; /* Updated */
+    display: none;
+    overflow-y: auto;
+    background-color: #f8f9fa;
+    box-shadow: -0.5rem 0 1rem rgba(0, 0, 0, 0.15); /* Updated */
+    transition: transform 0.3s ease;
+  }
+
+  
+  .offcanvas.show {
+    display: block;
+    transform: translateX(0);
+  }
+  
+  .offcanvas-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid #e9ecef;
+  }
+  
+  .offcanvas-title {
+    margin-bottom: 0;
+    line-height: 1.5;
+  }
+  
+  .offcanvas-body {
+    flex-grow: 1;
+    padding: 1rem;
+  }
+  
